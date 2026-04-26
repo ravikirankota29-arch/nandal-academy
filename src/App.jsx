@@ -80,7 +80,7 @@ const App = () => {
       `⏰ Time: ${new Date().toLocaleTimeString()}\n\n` +
       `*Please contact this parent for enrollment.*`
     );
-    
+
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
     window.open(whatsappUrl, '_blank');
   };
@@ -91,7 +91,7 @@ const App = () => {
     const message = encodeURIComponent(
       `👋 Hi! I'm interested in enrolling my child at Nandal Academy. Could you please provide more information about your programs?`
     );
-    
+
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
     window.open(whatsappUrl, '_blank');
   };
@@ -109,7 +109,7 @@ const App = () => {
     if (isAnimating) return;
     setIsAnimating(true);
     setShowResult(false);
-    
+
     // Show result after animation
     setTimeout(() => {
       setShowResult(true);
@@ -170,16 +170,16 @@ const App = () => {
               <Sparkles className="badge-icon" />
               <span>🏆 Award-Winning Program</span>
             </div>
-            
+
             <h1 className="hero-title">
               Transform Your Child's
               <span className="text-accent"> Mathematical Genius</span>
             </h1>
-            
+
             <p className="hero-subtitle">
               Join 10,000+ students who've unlocked their brain's full potential through our revolutionary abacus training method
             </p>
-            
+
             <div className="hero-stats">
               <div className="stat-item">
                 <div className="stat-number">10x</div>
@@ -194,7 +194,7 @@ const App = () => {
                 <div className="stat-label">Success Stories</div>
               </div>
             </div>
-            
+
             <div className="hero-buttons">
               <button className="btn btn-primary btn-large">
                 <Trophy className="btn-icon" />
@@ -237,7 +237,7 @@ const App = () => {
               },
               {
                 title: "Math Wizards",
-                age: "Ages 8-12", 
+                age: "Ages 8-12",
                 duration: "12 Months",
                 price: "$149/month",
                 features: ["Advanced Calculations", "Mental Math Techniques", "Speed Training", "Competition Preparation"],
@@ -247,7 +247,7 @@ const App = () => {
               {
                 title: "Master Scholars",
                 age: "Ages 13+",
-                duration: "18 Months", 
+                duration: "18 Months",
                 price: "$199/month",
                 features: ["Complex Problem Solving", "Competitive Math", "Brain Training", "Certification Program"],
                 color: "linear-gradient(135deg, #4facfe, #00f2fe)",
@@ -307,7 +307,7 @@ const App = () => {
             <div className="abacus-tutorial-section">
               <div className="tutorial-steps">
                 <h3 className="tutorial-title">Simple 3-Step Method</h3>
-                
+
                 <div className="step-by-step-guide">
                   <div className="tutorial-step">
                     <div className="step-icon">👆</div>
@@ -316,7 +316,7 @@ const App = () => {
                       <p>Move beads to show the first number (like 123)</p>
                     </div>
                   </div>
-                  
+
                   <div className="tutorial-step">
                     <div className="step-icon">➕</div>
                     <div className="step-info">
@@ -324,7 +324,7 @@ const App = () => {
                       <p>Move more beads to add the second number (like 456)</p>
                     </div>
                   </div>
-                  
+
                   <div className="tutorial-step">
                     <div className="step-icon">👀</div>
                     <div className="step-info">
@@ -333,7 +333,7 @@ const App = () => {
                     </div>
                   </div>
                 </div>
-                
+
                 <div className="why-it-works">
                   <h4>Why It's So Easy:</h4>
                   <ul className="easy-benefits">
@@ -350,28 +350,28 @@ const App = () => {
                   <div className="abacus-frame-3d-simple">
                     {[1, 2, 3, 4, 5].map((rod) => (
                       <div key={rod} className="abacus-rod-3d-simple" style={{ left: `${rod * 16}%` }}>
-                        <motion.div 
+                        <motion.div
                           className={`abacus-bead-3d-simple bead-yellow ${isAnimating ? 'move-bead-3d' : ''}`}
                           style={{ top: '20px' }}
-                          animate={isAnimating ? { 
+                          animate={isAnimating ? {
                             y: [0, 40, 0],
                             rotateZ: [0, 180, 360]
                           } : {}}
-                          transition={{ 
-                            duration: 1.5, 
+                          transition={{
+                            duration: 1.5,
                             delay: rod * 0.2,
                             ease: "easeInOut"
                           }}
                         />
-                        <motion.div 
+                        <motion.div
                           className={`abacus-bead-3d-simple bead-blue ${isAnimating ? 'move-bead-3d' : ''}`}
                           style={{ bottom: '20px' }}
-                          animate={isAnimating ? { 
+                          animate={isAnimating ? {
                             y: [0, -30, 0],
                             rotateZ: [0, -180, -360]
                           } : {}}
-                          transition={{ 
-                            duration: 2, 
+                          transition={{
+                            duration: 2,
                             delay: rod * 0.3,
                             ease: "easeInOut"
                           }}
@@ -382,12 +382,12 @@ const App = () => {
                     <div className="abacus-glow-3d-simple" />
                   </div>
                 </div>
-                
+
                 <div className="simple-demo-controls">
                   <div className="problem-simple">
                     <span className="math-problem">{currentProblem.num1} + {currentProblem.num2} = ?</span>
                     {showResult && (
-                      <motion.span 
+                      <motion.span
                         className="answer-simple"
                         initial={{ opacity: 0, scale: 0 }}
                         animate={{ opacity: 1, scale: 1 }}
@@ -397,9 +397,9 @@ const App = () => {
                       </motion.span>
                     )}
                   </div>
-                  
+
                   <div className="demo-buttons">
-                    <button 
+                    <button
                       className="demo-btn-simple primary"
                       onClick={handleTryIt}
                       disabled={isAnimating}
@@ -407,7 +407,7 @@ const App = () => {
                       <Play />
                       {isAnimating ? 'Calculating...' : 'Try It!'}
                     </button>
-                    <button 
+                    <button
                       className="demo-btn-simple secondary"
                       onClick={generateNewProblem}
                       disabled={isAnimating}
@@ -416,9 +416,9 @@ const App = () => {
                       New Problem
                     </button>
                   </div>
-                  
+
                   {showResult && (
-                    <motion.div 
+                    <motion.div
                       className="success-message"
                       initial={{ opacity: 0, y: 10 }}
                       animate={{ opacity: 1, y: 0 }}
@@ -431,7 +431,7 @@ const App = () => {
                 </div>
               </div>
             </div>
-            
+
             <div className="parent-benefits-compact">
               <h3>For Parents - Why Choose Abacus?</h3>
               <div className="benefits-grid">
@@ -528,12 +528,12 @@ const App = () => {
                 <Sparkles className="badge-icon" />
                 <span>Limited Time Offer</span>
               </div>
-              
+
               <h2 className="heading-2">Ready to Unlock Your Child's Potential?</h2>
               <p className="text-large">
                 Join 10,000+ successful students. Start with a free trial and get 20% off your first month!
               </p>
-              
+
               <div className="cta-stats">
                 <div className="cta-stat">
                   <span className="cta-number">10,000+</span>
@@ -548,31 +548,31 @@ const App = () => {
                   <span className="cta-label">Success Rate</span>
                 </div>
               </div>
-              
+
               <form className="cta-form" onSubmit={handleEnrollment}>
                 <div className="form-row">
-                  <input 
-                    type="text" 
+                  <input
+                    type="text"
                     name="parentName"
-                    placeholder="Parent's Name" 
+                    placeholder="Parent's Name"
                     className="input"
                     value={enrollmentData.parentName}
                     onChange={handleInputChange}
                     required
                   />
-                  <input 
-                    type="tel" 
+                  <input
+                    type="tel"
                     name="phone"
-                    placeholder="Phone Number" 
+                    placeholder="Phone Number"
                     className="input"
                     value={enrollmentData.phone}
                     onChange={handleInputChange}
                     required
                   />
-                  <input 
-                    type="email" 
+                  <input
+                    type="email"
                     name="email"
-                    placeholder="Email Address" 
+                    placeholder="Email Address"
                     className="input"
                     value={enrollmentData.email}
                     onChange={handleInputChange}
@@ -580,19 +580,19 @@ const App = () => {
                   />
                 </div>
                 <div className="form-row">
-                  <input 
-                    type="text" 
+                  <input
+                    type="text"
                     name="childName"
-                    placeholder="Child's Name" 
+                    placeholder="Child's Name"
                     className="input"
                     value={enrollmentData.childName}
                     onChange={handleInputChange}
                     required
                   />
-                  <input 
-                    type="number" 
+                  <input
+                    type="number"
                     name="childAge"
-                    placeholder="Child's Age" 
+                    placeholder="Child's Age"
                     className="input"
                     value={enrollmentData.childAge}
                     onChange={handleInputChange}
@@ -600,7 +600,7 @@ const App = () => {
                     max="18"
                     required
                   />
-                  <select 
+                  <select
                     name="program"
                     className="input"
                     value={enrollmentData.program}
@@ -619,7 +619,7 @@ const App = () => {
                   <ChevronRight className="btn-arrow" />
                 </button>
               </form>
-              
+
               {showEnrollmentSuccess && (
                 <div className="enrollment-success">
                   <MessageCircle className="success-icon" />
@@ -631,66 +631,91 @@ const App = () => {
         </div>
       </section>
 
-      {/* Footer - Simplified */}
-      <footer className="footer">
-        <div className="container">
-          <div className="footer-content">
-            <div className="footer-brand">
-              <div className="logo">
-                <Calculator className="logo-icon" />
-                <span>Nandal Academy</span>
+      <footer style={{ backgroundColor: '#0f172a', color: '#f8fafc', padding: '60px 20px' }}>
+        <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+          {/* Main Grid */}
+          <div className="footer-grid" style={{ 
+            display: 'grid', 
+            gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', 
+            gap: '40px' 
+          }}>
+            
+            {/* Brand Section */}
+            <div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '20px' }}>
+                <Calculator size={32} color="#818cf8" />
+                <h3 style={{ fontSize: '24px', margin: 0, fontWeight: 'bold' }}>Nandal Academy</h3>
               </div>
-              <p className="footer-description">
+              <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>
                 Empowering young minds through revolutionary abacus training methods that build confidence, speed, and mathematical excellence.
               </p>
-              <div className="social-icons">
-                <a href="#" className="social-icon">
-                  <MessageCircle />
-                </a>
-                <a href="#" className="social-icon">
-                  <Star />
-                </a>
-                <a href="#" className="social-icon">
-                  <Heart />
-                </a>
+              <div style={{ display: 'flex', gap: '15px', marginTop: '20px' }}>
+                <button onClick={handleQuickWhatsApp} style={{ padding: '10px', borderRadius: '50%', backgroundColor: '#1e293b', border: 'none', cursor: 'pointer', color: 'white' }}>
+                  <MessageCircle size={20} />
+                </button>
+                <div style={{ padding: '10px', borderRadius: '50%', backgroundColor: '#1e293b', color: 'white' }}>
+                  <Star size={20} />
+                </div>
               </div>
             </div>
-            
-            <div className="footer-links">
-              <div className="footer-column">
-                <h4 className="footer-title">Programs</h4>
-                <ul className="footer-list">
-                  <li><a href="#">Junior Mathematicians</a></li>
-                  <li><a href="#">Math Wizards</a></li>
-                  <li><a href="#">Master Scholars</a></li>
-                  <li><a href="#">Summer Camp</a></li>
-                </ul>
-              </div>
-              
-              <div className="footer-column">
-                <h4 className="footer-title">Resources</h4>
-                <ul className="footer-list">
-                  <li><a href="#">Parent Guide</a></li>
-                  <li><a href="#">Success Stories</a></li>
-                  <li><a href="#">Blog</a></li>
-                  <li><a href="#">FAQ</a></li>
-                </ul>
-              </div>
-              
-              <div className="footer-column">
-                <h4 className="footer-title">Contact</h4>
-                <ul className="footer-list">
-                  <li><a href="tel:+1234567890">+1 (234) 567-890</a></li>
-                  <li><a href="mailto:info@nandalacademy.com">info@nandalacademy.com</a></li>
-                  <li><a href="#">Locations</a></li>
-                  <li><a href="#">Support</a></li>
-                </ul>
+
+            {/* Map Section */}
+            <div>
+              <h3 style={{ fontSize: '18px', marginBottom: '20px', fontWeight: 'bold' }}>Find Our Center</h3>
+              <div style={{ borderRadius: '15px', overflow: 'hidden', border: '1px solid #334155', backgroundColor: '#1e293b' }}>
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3801.488349257636!2d75.932239!3d17.6871744!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTfCsDQxJzEzLjgiTiA3NcKwNTUnNTYuMSJF!5e0!3m2!1sen!2sin!4v1714120000000!5m2!1sen!2sin"
+                  width="100%"
+                  height="180"
+                  style={{ border: 0 }}
+                  allowFullScreen=""
+                  loading="lazy"
+                  title="Nandal Academy Map"
+                />
+                <div style={{ padding: '12px', display: 'flex', gap: '10px' }}>
+                  <button 
+                    onClick={() => window.open('https://www.google.com/maps/dir/?api=1&destination=17.6871744,75.932239', '_blank')}
+                    style={{ flex: 1, padding: '10px', backgroundColor: '#4f46e5', color: 'white', border: 'none', borderRadius: '8px', cursor: 'pointer', fontWeight: 'bold' }}
+                  >
+                    🗺️ Directions
+                  </button>
+                  <button 
+                    onClick={() => window.open('https://www.google.com/maps/search/?api=1&query=17.6871744,75.932239', '_blank')}
+                    style={{ flex: 1, padding: '10px', backgroundColor: '#334155', color: 'white', border: 'none', borderRadius: '8px', cursor: 'pointer', fontWeight: 'bold' }}
+                  >
+                    📍 Larger Map
+                  </button>
+                </div>
               </div>
             </div>
+
+            {/* Visit Section */}
+            <div>
+              <h3 style={{ fontSize: '18px', marginBottom: '20px', fontWeight: 'bold' }}>Visit Our Academy</h3>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '15px', color: '#cbd5e1' }}>
+                <div style={{ display: 'flex', gap: '12px' }}>
+                  <span>🏢</span>
+                  <p style={{ margin: 0 }}>Near Shelgi Road, Solapur, Maharashtra 413004</p>
+                </div>
+                <div style={{ display: 'flex', gap: '12px' }}>
+                  <span style={{ color: '#4ade80' }}>📱</span>
+                  <p style={{ margin: 0, fontWeight: 'bold' }}>+91 8446859957</p>
+                </div>
+                <div style={{ display: 'flex', gap: '12px' }}>
+                  <span style={{ color: '#818cf8' }}>📧</span>
+                  <p style={{ margin: 0 }}>info@nandalacademy.com</p>
+                </div>
+                <div style={{ marginTop: '10px', paddingTop: '10px', borderTop: '1px solid #334155' }}>
+                  <p style={{ fontSize: '10px', color: '#64748b', textTransform: 'uppercase', marginBottom: '4px' }}>GPS Location</p>
+                  <p style={{ fontSize: '13px', fontFamily: 'monospace' }}>17.6871, 75.9322</p>
+                </div>
+              </div>
+            </div>
+
           </div>
-          
-          <div className="footer-bottom">
-            <p>&copy; 2026 Nandal Academy. All rights reserved. | Privacy Policy | Terms of Service</p>
+
+          <div style={{ borderTop: '1px solid #1e293b', marginTop: '60px', paddingTop: '20px', textAlign: 'center', color: '#64748b', fontSize: '14px' }}>
+            <p>© 2026 Nandal Academy. All rights reserved.</p>
           </div>
         </div>
       </footer>
