@@ -12,7 +12,7 @@ const App = () => {
   const [enrollmentData, setEnrollmentData] = useState({
     parentName: '',
     phone: '',
-    email: '',
+    // email: '',
     childName: '',
     childAge: '',
     program: ''
@@ -46,7 +46,7 @@ const App = () => {
   // Handle enrollment form submission
   const handleEnrollment = (e) => {
     e.preventDefault();
-    if (enrollmentData.parentName && enrollmentData.phone && enrollmentData.email) {
+    if (enrollmentData.parentName && enrollmentData.phone) {
       // Send WhatsApp message
       sendWhatsAppMessage(enrollmentData);
       setShowEnrollmentSuccess(true);
@@ -55,7 +55,7 @@ const App = () => {
       setEnrollmentData({
         parentName: '',
         phone: '',
-        email: '',
+        // email: '',
         childName: '',
         childAge: '',
         program: ''
@@ -71,7 +71,7 @@ const App = () => {
       `*Parent Details:*\n` +
       `👤 Name: ${data.parentName}\n` +
       `📱 Phone: ${data.phone}\n` +
-      `📧 Email: ${data.email}\n\n` +
+      // `📧 Email: ${data.email}\n\n` +
       `*Child Details:*\n` +
       `👶 Name: ${data.childName}\n` +
       `🎂 Age: ${data.childAge}\n` +
@@ -177,7 +177,7 @@ const App = () => {
             </h1>
 
             <p className="hero-subtitle">
-              Join 10,000+ students who've unlocked their brain's full potential through our revolutionary abacus training method
+              Join 500+ students who've unlocked their brain's full potential through our revolutionary abacus training method
             </p>
 
             <div className="hero-stats">
@@ -190,7 +190,7 @@ const App = () => {
                 <div className="stat-label">Improvement Rate</div>
               </div>
               <div className="stat-item">
-                <div className="stat-number">500+</div>
+                <div className="stat-number">100+</div>
                 <div className="stat-label">Success Stories</div>
               </div>
             </div>
@@ -264,9 +264,9 @@ const App = () => {
                   </div>
                 </div>
                 <div className="program-content">
-                  <div className="program-price">
+                  {/* <div className="program-price">
                     <span className="price-amount">{program.price}</span>
-                  </div>
+                  </div> */}
                   <ul className="program-features">
                     {program.features.map((feature, i) => (
                       <li key={i} className="feature-item">
@@ -478,23 +478,23 @@ const App = () => {
           <div className="testimonials-grid">
             {[
               {
-                name: "Sarah Johnson",
-                role: "Parent of Emma (8 years)",
-                content: "Emma went from struggling with basic math to solving complex problems in her head. Her confidence has soared!",
+                name: "Anuradha Madas",
+                role: "Parent of Parth(10 years)",
+                content: "Excellent improvement in concentration and calculation speed. My daughter enjoys every class.",
                 rating: 5,
                 image: "👩‍👧"
               },
               {
-                name: "Michael Chen",
-                role: "Parent of Ryan (10 years)",
-                content: "The improvement in Ryan's concentration and grades has been remarkable. Worth every penny!",
+                name: "Yashoda Gurram",
+                role: "Parent of Aryan (5 years)",
+                content: "The teaching methods are very engaging and easy for children to understand.",
                 rating: 5,
                 image: "👨‍👦"
               },
               {
-                name: "Lisa Martinez",
-                role: "Parent of Sofia (12 years)",
-                content: "Sofia now loves math and even participates in competitions. The teachers are amazing!",
+                name: "Rupali Kota",
+                role: "Parent of Druv (3 years)",
+                content: "My son became more confident in maths after joining these abacus classes.",
                 rating: 5,
                 image: "👩‍👧"
               }
@@ -569,7 +569,7 @@ const App = () => {
                     onChange={handleInputChange}
                     required
                   />
-                  <input
+                  {/* <input
                     type="email"
                     name="email"
                     placeholder="Email Address"
@@ -577,7 +577,7 @@ const App = () => {
                     value={enrollmentData.email}
                     onChange={handleInputChange}
                     required
-                  />
+                  /> */}
                 </div>
                 <div className="form-row">
                   <input
