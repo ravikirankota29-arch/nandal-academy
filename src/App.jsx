@@ -596,7 +596,7 @@ const App = () => {
                     className="input"
                     value={enrollmentData.childAge}
                     onChange={handleInputChange}
-                    min="5"
+                    min="2"
                     max="18"
                     required
                   />
