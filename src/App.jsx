@@ -608,9 +608,9 @@ const App = () => {
                     required
                   >
                     <option value="">Select Program</option>
-                    <option value="junior">Junior Mathematicians (Ages 5-7)</option>
-                    <option value="wizards">Math Wizards (Ages 8-12)</option>
-                    <option value="scholars">Master Scholars (Ages 13+)</option>
+                    <option value="Zero Level">Zero Level (Ages 6-7)</option>
+                    <option value="Junior Level">Junior Level (Ages 8-12)</option>
+                    <option value="Senior Level - I">Senior Level - I (Ages 13+)</option>
                   </select>
                 </div>
                 <button type="submit" className="btn btn-primary btn-large cta-btn">
