@@ -227,29 +227,29 @@ const App = () => {
           <div className="programs-grid">
             {[
               {
-                title: "Junior Mathematicians",
-                age: "Ages 5-7",
-                duration: "6 Months",
+                title: "Zero Level",
+                age: "Ages 6-7",
+                duration: "3 Months",
                 price: "$99/month",
-                features: ["Basic Number Recognition", "Simple Addition/Subtraction", "Fun Learning Games", "Parent Progress Reports"],
+                features: ["Basic Number Recognition", "Simple Addition/Subtraction", "Fun Learning Games", "Parent Progress Reports", "Certification"],
                 color: "linear-gradient(135deg, #667eea, #764ba2)",
                 icon: <Brain className="program-icon" />
               },
               {
-                title: "Math Wizards",
+                title: "Junior Level",
                 age: "Ages 8-12",
-                duration: "12 Months",
+                duration: "3 Months",
                 price: "$149/month",
-                features: ["Advanced Calculations", "Mental Math Techniques", "Speed Training", "Competition Preparation"],
+                features: ["Advanced Calculations", "Mental Math Techniques", "Speed Training", "Competition Preparation", 'visualization Techniques', "Certification"],
                 color: "linear-gradient(135deg, #f093fb, #f5576c)",
                 icon: <Zap className="program-icon" />
               },
               {
-                title: "Master Scholars",
+                title: "Senior Level - I",
                 age: "Ages 13+",
-                duration: "18 Months",
+                duration: "3 Months",
                 price: "$199/month",
-                features: ["Complex Problem Solving", "Competitive Math", "Brain Training", "Certification Program"],
+                features: ["Complex Problem Solving", "Competitive Math", "Brain Training", 'visualization Techniques', "Certification"],
                 color: "linear-gradient(135deg, #4facfe, #00f2fe)",
                 icon: <Trophy className="program-icon" />
               }
@@ -443,7 +443,7 @@ const App = () => {
                 <div className="benefit-card">
                   <div className="benefit-emoji">👨‍🏫</div>
                   <h4>Expert Teachers</h4>
-                  <p>Certified instructors with 10+ years experience</p>
+                  <p>Certified instructors with 8+ years experience</p>
                 </div>
                 <div className="benefit-card">
                   <div className="benefit-emoji">⏰</div>
@@ -480,7 +480,7 @@ const App = () => {
               {
                 name: "Anuradha Madas",
                 role: "Parent of Parth(10 years)",
-                content: "Excellent improvement in concentration and calculation speed. My daughter enjoys every class.",
+                content: "Excellent improvement in concentration and calculation speed. My son enjoys every class.",
                 rating: 5,
                 image: "👩‍👧"
               },
@@ -531,12 +531,12 @@ const App = () => {
 
               <h2 className="heading-2">Ready to Unlock Your Child's Potential?</h2>
               <p className="text-large">
-                Join 10,000+ successful students. Start with a free trial and get 20% off your first month!
+                Join 500+ successful students. Start with a free trial and get 20% off your first month!
               </p>
 
               <div className="cta-stats">
                 <div className="cta-stat">
-                  <span className="cta-number">10,000+</span>
+                  <span className="cta-number">500+</span>
                   <span className="cta-label">Students Enrolled</span>
                 </div>
                 <div className="cta-stat">
@@ -634,12 +634,12 @@ const App = () => {
       <footer style={{ backgroundColor: '#0f172a', color: '#f8fafc', padding: '60px 20px' }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
           {/* Main Grid */}
-          <div className="footer-grid" style={{ 
-            display: 'grid', 
-            gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', 
-            gap: '40px' 
+          <div className="footer-grid" style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+            gap: '40px'
           }}>
-            
+
             {/* Brand Section */}
             <div>
               <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '20px' }}>
@@ -673,13 +673,13 @@ const App = () => {
                   title="Nandal Academy Map"
                 />
                 <div style={{ padding: '12px', display: 'flex', gap: '10px' }}>
-                  <button 
+                  <button
                     onClick={() => window.open('https://www.google.com/maps/dir/?api=1&destination=17.6871744,75.932239', '_blank')}
                     style={{ flex: 1, padding: '10px', backgroundColor: '#4f46e5', color: 'white', border: 'none', borderRadius: '8px', cursor: 'pointer', fontWeight: 'bold' }}
                   >
                     🗺️ Directions
                   </button>
-                  <button 
+                  <button
                     onClick={() => window.open('https://www.google.com/maps/search/?api=1&query=17.6871744,75.932239', '_blank')}
                     style={{ flex: 1, padding: '10px', backgroundColor: '#334155', color: 'white', border: 'none', borderRadius: '8px', cursor: 'pointer', fontWeight: 'bold' }}
                   >
@@ -698,8 +698,16 @@ const App = () => {
                   <p style={{ margin: 0 }}>Near Shelgi Road, Solapur, Maharashtra 413004</p>
                 </div>
                 <div style={{ display: 'flex', gap: '12px' }}>
+                  <span>🏢</span>
+                  <p style={{ margin: 0 }}>HIG - 25 Near Peddatata Ganapati Temple J Group, Vidi Gharkul, Solapur.</p>
+                </div>
+                <div style={{ display: 'flex', gap: '12px' }}>
                   <span style={{ color: '#4ade80' }}>📱</span>
                   <p style={{ margin: 0, fontWeight: 'bold' }}>+91 8446859957</p>
+                </div>
+                <div style={{ display: 'flex', gap: '12px' }}>
+                  <span style={{ color: '#4ade80' }}>📱</span>
+                  <p style={{ margin: 0, fontWeight: 'bold' }}>+91 9960355130</p>
                 </div>
                 <div style={{ display: 'flex', gap: '12px' }}>
                   <span style={{ color: '#818cf8' }}>📧</span>
