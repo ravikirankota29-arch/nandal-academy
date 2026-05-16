@@ -705,10 +705,10 @@ const App = () => {
                   <span style={{ color: '#818cf8' }}>📧</span>
                   <p style={{ margin: 0 }}>info@nandalacademy.com</p>
                 </div>
-                <div style={{ marginTop: '10px', paddingTop: '10px', borderTop: '1px solid #334155' }}>
+                {/* <div style={{ marginTop: '10px', paddingTop: '10px', borderTop: '1px solid #334155' }}>
                   <p style={{ fontSize: '10px', color: '#64748b', textTransform: 'uppercase', marginBottom: '4px' }}>GPS Location</p>
                   <p style={{ fontSize: '13px', fontFamily: 'monospace' }}>17.6871, 75.9322</p>
-                </div>
+                </div> */}
               </div>
             </div>
 
