@@ -443,7 +443,7 @@ const App = () => {
                 <div className="benefit-card">
                   <div className="benefit-emoji">👨‍🏫</div>
                   <h4>Expert Teachers</h4>
-                  <p>Certified instructors with 8+ years experience</p>
+                  <p>Certified instructors with 3+ years experience</p>
                 </div>
                 <div className="benefit-card">
                   <div className="benefit-emoji">⏰</div>
